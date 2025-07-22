@@ -1,0 +1,151 @@
+:root {
+  /* Colors */
+  --primary: #1a73e8;
+  --primary-dark: #0d5bcd;
+  --primary-light: #e8f0fe;
+  --secondary: #34a853;
+  --accent: #fbbc04;
+  --danger: #d93025;
+  
+  /* Neutrals */
+  --dark: #202124;
+  --gray-900: #3c4043;
+  --gray-800: #5f6368;
+  --gray-700: #80868b;
+  --gray-600: #9aa0a6;
+  --gray-500: #bdbfc2;
+  --gray-400: #dadce0;
+  --gray-300: #e8eaed;
+  --gray-200: #f1f3f4;
+  --gray-100: #f8f9fa;
+  --white: #ffffff;
+  
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  
+  /* Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition: 0.3s ease;
+  --transition-slow: 0.5s ease;
+}
+
+/* Base Styles */
+body {
+  font-family: var(--font-sans);
+  color: var(--gray-900);
+  line-height: 1.6;
+  background-color: var(--white);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--dark);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Cards */
+.card {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: all var(--transition);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Forms */
+.input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--gray-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
+}
+
+.section {
+  padding: var(--space-3xl) 0;
+  width: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
